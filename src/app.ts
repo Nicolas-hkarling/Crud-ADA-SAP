@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import studentsRouter from "../routes/studentsRouter";
 import cors from "cors";
 import teachersRouter from "../routes/teachersRouter";
-import staffsRouter from "../routes/staffs";
+import staffsRouter from "../routes/staffsRouter";
 
 dotenv.config();
 
