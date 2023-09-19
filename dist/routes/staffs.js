@@ -1,0 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const staffsController_1 = require("../controllers/staffsController");
+const staffsRouter = (0, express_1.Router)();
+staffsRouter.get("/", staffsController_1.staffsRoot);
+staffsRouter.get("/staffsList", staffsController_1.staffsList);
+staffsRouter.get("/staffsBysector", staffsController_1.staffsBysector);
+staffsRouter.get("/staffDetails/", staffsController_1.staffDetailsByQuery);
+staffsRouter.get("/staffDetails/:id", staffsController_1.staffDetailsByParams);
+staffsRouter.post("/addStaff", staffsController_1.addStaff);
+staffsRouter.put("/updateStaff", staffsController_1.updateStaff);
+staffsRouter.patch("/updateStaffBySpecificField", staffsController_1.updateStaffBySpecificField);
+staffsRouter.delete("/deleteStaff", staffsController_1.deleteStaffByQuery);
+staffsRouter.delete("/deleteStaff/:id", staffsController_1.deleteStaffByParams);
+exports.default = staffsRouter;
